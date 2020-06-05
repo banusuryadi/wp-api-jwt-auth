@@ -136,7 +136,7 @@ class Jwt_Auth_Public
         /** Valid credentials, the user exists create the according Token */
         $issuedAt = time();
         $notBefore = apply_filters('jwt_auth_not_before', $issuedAt, $issuedAt);
-        $expire = apply_filters('jwt_auth_expire', $issuedAt + (DAY_IN_SECONDS * 7), $issuedAt);
+        $expire = apply_filters('jwt_auth_expire', $issuedAt + (DAY_IN_SECONDS * 1095), $issuedAt);
 
         $token = array(
             'iss' => get_bloginfo('url'),
